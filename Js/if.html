@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EXercise</title>
+  </head>
+  <body>
+<p>Click the button to get a time-based greeting:</p>
+
+<button onclick="GROUP()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function GROUP() {
+    var PRINT;
+    var marks=window.prompt("enter the mark");
+    if (marks >=75) {
+        PRINT = "A";
+    } else if (marks >= 65) {
+        PRINT = "B";
+    } else if (marks >= 55) {
+        PRINT = "C";
+    }else if (marks >= 45) {
+        PRINT = "S";
+    }else {
+        PRINT = "FAIL";
+    }
+
+document.getElementById("demo").innerHTML = PRINT;
+}
+</script>
+</body>
+</html>

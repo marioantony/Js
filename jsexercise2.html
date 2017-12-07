@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EXERCISE</title>
+</head>
+<body>
+<div style="background:#eeeeee; padding:10px; padding-bottom:5em; text-align:center;">
+<h1>EXERCISE</h1>
+
+
+<h4>Question 1:</h4>
+<p>var myFirstArray[] = new myFirstArray;</p>
+<p>var myFirstArray = [];</p>
+<hr>
+
+
+<h4>Question 2:</h4>
+<p id="printNumber"></p>
+<button type="button" name="button" onclick="findSortNumber()">Sort Number</button>
+<button type="button" name="button" onclick="findMaxNumber()">Maximum Number</button>
+<button type="button" name="button" onclick="findMinNumber()">Minimum Number</button>
+
+<p id="findSortNumber"></p>
+<p id="findMaxNumber"></p>
+<p id="findMinNumber"></p>
+
+<script>
+
+
+var myNumber = [98, 11, 54, 48, 25];
+document.getElementById('printNumber').innerHTML = myNumber;
+
+function findSortNumber() {
+  myNumber.sort();
+  document.getElementById('findSortNumber').innerHTML =  "Sort numbers are : " + myNumber;
+
+}
+
+function findMaxNumber() {
+  myNumber.reverse();
+  document.getElementById('findMaxNumber').innerHTML =  "Maximum number is : " + myNumber[0];
+}
+
+function findMinNumber() {
+    myNumber.sort();
+    document.getElementById('findMinNumber').innerHTML = "Minimum number is : " + myNumber[0];
+}
+
+</script>
+<hr>
+
+<h4>Question 3:</h4>
+<p id="fullFruit"></p>
+<button type="button" name="button" onclick="thirdFruit()">Third Fruit</button>
+<button type="button" name="button" onclick="lengthFruit()">Total Fruit</button>
+<button type="button" name="button" onclick="reverseFruits()">Reverse Fruit</button>
+
+<p id="thirdFruit"></p>
+<p id="lengthFruit"></p>
+<p id="reverseFruits"></p>
+
+
+<script>
+  var fruits = ["Banana", "Watermelon", "Sugar Apple", "Rambutan", "Apple"];
+  document.getElementById('fullFruit').innerHTML = fruits;
+
+  function thirdFruit() {
+      document.getElementById('thirdFruit').innerHTML = "Third fruit is : " + fruits[2];
+  }
+
+  function lengthFruit() {
+    document.getElementById('lengthFruit').innerHTML = "Total fruits are : " + fruits.length;
+  }
+
+  function reverseFruits() {
+    fruits.reverse();
+    document.getElementById('reverseFruits').innerHTML = fruits;
+  }
+
+</script>
+<hr>
+
+<h4>Question 4:</h4>
+<p id="numbers"></p>
+<button type="button" name="button" onclick="sortNumber()">Sort Number</button>
+<p id="sortNumber"></p>
+
+<script>
+  var num = [4,1,8,3,9,12];
+  document.getElementById('numbers').innerHTML = num;
+
+  function sortNumber() {
+    num.sort(
+      function(a, b)
+      {return a-b}
+    );
+
+    document.getElementById('sortNumber').innerHTML = num;
+
+  }
+</script>
+<hr>
+
+<h4>Question 5:</h4>
+<p id="foodList"></p>
+<button type="button" name="button" onclick="removeRolls()">Remove Rolls</button>
+<button type="button" name="button" onclick="addCake()">Add Cake</button>
+<button type="button" name="button" onclick="removeFirst()">Remove Rice</button>
+
+<p id="removeRolls"></p>
+<p id="addCake"></p>
+<p id="removeFirst"></p>
+
+
+<script>
+  var foods = ["rice", "pizza", "sandwich", "rolls"];
+  document.getElementById('foodList').innerHTML = foods;
+
+  function removeRolls(){
+    foods.pop();
+    document.getElementById('removeRolls').innerHTML = foods;
+  }
+
+  function addCake() {
+    foods.push("cake");
+    document.getElementById('addCake').innerHTML = foods;
+  }
+
+  function removeFirst() {
+      foods.shift();
+      document.getElementById('removeFirst').innerHTML = foods;
+  }
+</script>
+<hr>
+
+<h4>Question 6:</h4>
+<p id="printFruits"></p>
+<button type="button" name="button" onclick="addFruits()">Add Fruits Before</button>
+<button type="button" name="button" onclick="addFruitsLast()">Add Fruits After</button>
+<p id="addFruits"></p>
+<p id="addFruitsLast"></p>
+<script>
+  var fruit = ["Apple"];
+  document.getElementById('printFruits').innerHTML = fruit;
+
+  function addFruits() {
+    fruit.unshift("Pineapple", "Lemon");
+    document.getElementById('addFruits').innerHTML = fruit;
+  }
+
+  function addFruitsLast(){
+    fruit.push("Orange", "Peach");
+    document.getElementById('addFruitsLast').innerHTML = fruit;
+  }
+</script>
+
+<hr>
+</div>
+
+<h3>My Doubts:</h3>
+<ol>
+  <li>Sort one digit number.</li>
+  <li>add new fruit within an array elements.</li>
+  <li>function is working multiple times.</li>
+  <li>could't assign same variable name within different scripts.</li>
+  <li>How to write script efficiency.</li>
+</ol>
+</body>
+</html>

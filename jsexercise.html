@@ -27,26 +27,27 @@ function myFunction(p1, p2) {
 document.getElementById("Kareem").innerHTML = myFunction(5, 2);
 </script>
 <script>
-  var a=100;
-  var b=20;
-  var p=a+b;
-  var d=a-b;
-  var e=a*b;
-  var f=a/b;
-  document.getElementById("Ashan").innerHTML ="The addition of the two numbers is"+" "+ p;
-  document.getElementById("shan").innerHTML ="The multiplication of the two numbers is"+" "+ d;
-  document.getElementById("hisha").innerHTML ="The sbtracytion of the two numbers is"+" "+ e;
-  document.getElementById("dool").innerHTML ="The division of the two numbers is"+" "+ f;
+
+  var num1=6;
+  var num2=4;
+  function addNum(num1, num2){
+  return num1+num2;
+}
+document.getElementById("Ashan").innerHTML =addNum();
+
+
 </script>
 <script>
-
+function alertHello(){
 window.alert ("Hello World!");
-
+}
+alertHello();
 </script>
+
 <script>
  function volumeOfCubid(b,w,h){
-   return b*w*h
-   document.getElementById("woo").innerHTML =volumeOfcubid(100)
+   return b*w*h;
+   document.getElementById("woo").innerHTML =volumeOfcubid(100);
 
  }
 </script>
@@ -60,6 +61,32 @@ var course={ name:"BIT",fees:"150,000",date:"12.06.2018", center:"Our Office"}
   document.getElementById("siluvai").innerHTML ="course Fees-"+" "+course.fees;
   document.getElementById("mari").innerHTML ="Start Date-"+" "+course.date;
   document.getElementById("ma").innerHTML ="Center-"+" "+course.center;
+</script>
+
+<p>Click the button to get a time-based greeting:</p>
+
+<button onclick="group()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function group() {
+    var print;
+    var marks=window.prompt("enter the mark");
+    if (marks >=75) {
+        print = "A";
+    } else if (marks >= 65) {
+        print = "B";
+    } else if (marks >= 55) {
+        print = "C";
+    }else if (marks >= 45) {
+        print = "S";
+    }else {
+        print = "FAIL";
+    }
+
+document.getElementById("demo").innerHTML = print;
+}
 </script>
   </body>
 </html>
